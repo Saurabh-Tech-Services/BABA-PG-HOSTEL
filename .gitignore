@@ -25,6 +25,9 @@ dist-ssr
 # Lovable editor config (not needed outside Lovable)
 .lovable
 
+# Vercel cache and build output
+.vercel
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
