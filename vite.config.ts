@@ -10,9 +10,10 @@ export default defineConfig({
     tanstackStart({
       server: {
         entry: "src/server.ts",
-        // Use the vercel preset when deploying — nitro auto-detects Vercel CI,
-        // but being explicit avoids surprises. For local dev this is ignored.
-        preset: process.env.VERCEL ? "vercel" : "node-server",
+        // "vercel" preset makes nitro output to .vercel/output/ (Build Output API v3)
+        // which Vercel auto-detects — no outputDirectory needed in vercel.json.
+        // For local dev, npm run dev uses Vite's dev server and ignores this.
+        preset: "vercel",
       },
     }),
     react(),
