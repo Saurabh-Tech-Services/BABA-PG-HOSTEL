@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block private / build paths
+Disallow: /api/
+Disallow: /.output/
+Disallow: /.tanstack/
+
+Sitemap: https://shivibabapg.com/sitemap.xml

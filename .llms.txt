@@ -1,0 +1,35 @@
+# BABA PG & HOSTEL — LLM Context
+
+## Project
+Website for **BABA PG & HOSTEL**, a boys PG and hostel in Jaat Colony, Dankaur, Greater Noida, UP.
+
+## Stack
+- TanStack Start (React SSR) + TanStack Router (file-based)
+- Tailwind CSS v4, Radix UI / shadcn components
+- EmailJS for booking form, Vite 8, deployed on Vercel
+
+## Key Files
+- `src/data/hostel.ts` — single source of truth for all business data
+- `src/data/gallery.ts` — gallery images list
+- `src/lib/seo.ts` — SEO helpers, OG images, structured data
+- `src/routes/` — file-based pages (index, rooms, pricing, facilities, gallery, about, contact, book-now)
+- `src/components/site/` — reusable page sections
+- `public/sitemap.xml`, `public/robots.txt` — SEO files
+- `vercel.json` — Vercel deployment config
+
+## Business Info (do not fabricate)
+- Name: BABA PG & HOSTEL | Type: Boys Hostel / PG
+- Address: Atta Road, Jaat Colony, Dankaur, Greater Noida, UP 203201
+- Phones: 7037936443, 9999645243 | WhatsApp: 9999645243
+- Email: Prashantkasana60@gmail.com
+- Owner: Prashant Kasana | Manager: Vicky Kasana
+- Rooms: Double Sharing — Non-AC ₹8,000/mo, AC ₹12,000/mo
+- Security deposit: ₹4,000 refundable
+- Food: Included
+- Nearby: Galgotias University, NIU, GL Bajaj College
+
+## Rules
+- All business data lives in `src/data/hostel.ts` — never duplicate it elsewhere
+- No fake reviews, distances, policies, or social links
+- VITE_ prefixed env vars for EmailJS credentials and site origin
+- `VITE_SITE_ORIGIN` must be set to `https://shivibabapg.com` in Vercel env vars for correct OG image URLs
