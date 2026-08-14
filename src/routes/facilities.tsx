@@ -4,9 +4,9 @@ import { FacilitiesGrid } from "@/components/site/FacilitiesGrid";
 import { FoodSection, FinalCta } from "@/components/site/Sections";
 import { pageHead, breadcrumbSchema } from "@/lib/seo";
 
-const title = "Facilities | Wi-Fi, Food, Laundry & CCTV — BABA PG & HOSTEL Dankaur";
+const title = "Facilities & Amenities | BABA PG & HOSTEL";
 const description =
-  "Facilities at BABA PG & HOSTEL, Dankaur: Wi-Fi, power backup, RO water, geyser, housekeeping, laundry, CCTV, common area, parking and food included with your stay.";
+  "Amenities at BABA PG Dankaur: Wi-Fi, 24/7 power backup, RO water, laundry, CCTV, home-cooked food & parking.";
 
 export const Route = createFileRoute("/facilities")({
   head: () => ({

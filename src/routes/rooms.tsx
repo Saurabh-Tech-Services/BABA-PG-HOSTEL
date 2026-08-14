@@ -4,9 +4,9 @@ import { RoomShowcase, RoomComparison } from "@/components/site/RoomShowcase";
 import { FinalCta } from "@/components/site/Sections";
 import { pageHead, breadcrumbSchema } from "@/lib/seo";
 
-const title = "Rooms | Double Sharing AC & Non-AC Rooms — BABA PG & HOSTEL Dankaur";
+const title = "Rooms & Sharing Options | BABA PG & HOSTEL";
 const description =
-  "Double sharing boys hostel rooms in Dankaur, Greater Noida with AC and non-AC options, bed, mattress, study furniture and food included in the monthly rent.";
+  "Double sharing AC & Non-AC rooms in Dankaur with bed, mattress, study desk, food & daily essentials included.";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({

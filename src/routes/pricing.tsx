@@ -6,9 +6,9 @@ import { FaqAccordion } from "@/components/site/FaqAccordion";
 import { FinalCta } from "@/components/site/Sections";
 import { pageHead, breadcrumbSchema } from "@/lib/seo";
 
-const title = "Pricing | ₹8,000 Non-AC & ₹12,000 AC PG in Dankaur — BABA PG & HOSTEL";
+const title = "Pricing & Plans | BABA PG & HOSTEL Dankaur";
 const description =
-  "Transparent monthly pricing for boys PG in Dankaur: ₹8,000 non-AC and ₹12,000 AC double sharing, food included, with a ₹4,000 refundable security deposit.";
+  "Transparent boys PG pricing in Dankaur: ₹8,000 Non-AC & ₹12,000 AC double sharing with food included & refundable deposit.";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({

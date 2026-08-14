@@ -6,9 +6,9 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/terms")({
   head: () =>
     pageHead({
-      title: "Terms & Conditions | BABA PG & HOSTEL Dankaur",
+      title: "Terms & Conditions | BABA PG & HOSTEL",
       description:
-        "Terms of use for the BABA PG & HOSTEL website, including how pricing and availability information is presented.",
+        "Terms and conditions for residents and booking inquiries at BABA PG & HOSTEL Dankaur.",
       path: "/terms",
     }),
   component: TermsPage,

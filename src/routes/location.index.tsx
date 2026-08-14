@@ -7,9 +7,9 @@ import { travelRoutes, locationPages } from "@/data/locations";
 import { fullAddress } from "@/data/hostel";
 import { pageHead, breadcrumbSchema } from "@/lib/seo";
 
-const title = "Location & Routes | How to Reach BABA PG & HOSTEL, Dankaur";
+const title = "Location & Directions | BABA PG & HOSTEL";
 const description =
-  "Step-by-step routes to BABA PG & HOSTEL in Jaat Colony, Dankaur — 1.5 km from Galgotias University (₹10 auto) and 60 km from New Delhi Railway Station by taxi or metro.";
+  "Directions to BABA PG & HOSTEL on Atta Road, Jaat Colony, Dankaur near Galgotias University, NIU & GL Bajaj.";
 
 export const Route = createFileRoute("/location/")({
   head: () => ({

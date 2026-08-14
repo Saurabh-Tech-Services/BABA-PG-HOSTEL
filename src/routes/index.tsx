@@ -21,9 +21,9 @@ import { pageHead, localBusinessSchema, faqSchema } from "@/lib/seo";
 import { hostel, telHref } from "@/data/hostel";
 
 
-const title = "BABA PG & HOSTEL | Boys PG & Hostel in Dankaur, Greater Noida";
+const title = "BABA PG & HOSTEL | Boys PG & Hostel in Dankaur";
 const description =
-  "BABA PG & HOSTEL offers comfortable boys PG and hostel accommodation in Jaat Colony, Dankaur, Greater Noida. Double-sharing AC & non-AC rooms, food included and convenient location near nearby colleges.";
+  "Boys PG & hostel in Dankaur near Galgotias & NIU. Double-sharing AC & Non-AC rooms with food included & modern amenities.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

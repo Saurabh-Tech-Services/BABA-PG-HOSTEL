@@ -7,9 +7,9 @@ import { hostel, highlights, telHref, whatsappHref, formatPrice, roomPlans } fro
 import { pageHead, breadcrumbSchema } from "@/lib/seo";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
-const title = "Book Now | Enquire About a Room — BABA PG & HOSTEL Dankaur";
+const title = "Book Your Room | BABA PG & HOSTEL Dankaur";
 const description =
-  "Send a booking enquiry to BABA PG & HOSTEL, Dankaur. Choose AC or non-AC double sharing, share your move-in date, or call and WhatsApp us directly.";
+  "Book double sharing AC & Non-AC rooms at BABA PG & HOSTEL Dankaur. Quick online inquiry & instant WhatsApp assistance.";
 
 export const Route = createFileRoute("/book-now")({
   head: () => ({

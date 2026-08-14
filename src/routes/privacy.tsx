@@ -6,9 +6,9 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/privacy")({
   head: () =>
     pageHead({
-      title: "Privacy Policy | BABA PG & HOSTEL Dankaur",
+      title: "Privacy Policy | BABA PG & HOSTEL",
       description:
-        "How BABA PG & HOSTEL, Dankaur handles the information you share through enquiry forms, phone calls and WhatsApp messages.",
+        "Privacy policy for BABA PG & HOSTEL website users and booking inquiries in Dankaur, Greater Noida.",
       path: "/privacy",
     }),
   component: PrivacyPage,

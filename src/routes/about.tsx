@@ -5,9 +5,9 @@ import { WhyChooseUs, Testimonials, FinalCta } from "@/components/site/Sections"
 import { hostel, fullAddress } from "@/data/hostel";
 import { pageHead, breadcrumbSchema } from "@/lib/seo";
 
-const title = "About | Boys PG & Hostel in Jaat Colony, Dankaur — BABA PG & HOSTEL";
+const title = "About Us | BABA PG & HOSTEL Dankaur";
 const description =
-  "About BABA PG & HOSTEL, a boys PG and hostel in Jaat Colony, Dankaur, Greater Noida offering double sharing AC and non-AC rooms with food included.";
+  "About BABA PG & HOSTEL in Jaat Colony, Dankaur. Safe, comfortable boys accommodation near Galgotias & NIU with food included.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

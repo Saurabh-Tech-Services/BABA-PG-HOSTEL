@@ -21,8 +21,8 @@ export const Route = createFileRoute("/location/$slug")({
       };
     }
     const l = loaderData.location;
-    const title = `PG & Hostel near ${l.name} | BABA PG & HOSTEL, Dankaur`;
-    const description = `${l.tagline}. ${l.intro.slice(0, 120)}...`.replace(/\s+/g, " ");
+    const title = `PG & Hostel near ${l.name} | BABA PG`;
+    const description = `${l.tagline}. Affordable double sharing rooms with food near ${l.name}.`.slice(0, 145);
     return {
       ...pageHead({ title, description, path: `/location/${params.slug}`, ogType: "article" }),
       meta: [

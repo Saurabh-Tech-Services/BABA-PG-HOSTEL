@@ -1,10 +1,10 @@
 import { hostel, fullAddress, roomPlans, formatPrice } from "@/data/hostel";
 
-const SITE_ORIGIN = import.meta.env.VITE_SITE_ORIGIN ?? "";
+const SITE_ORIGIN = (import.meta.env.VITE_SITE_ORIGIN || "https://shivibabapg.com").replace(/\/$/, "");
 
 export const ogImages = {
-  primary: `${SITE_ORIGIN}/src/assets/og-image.jpg`,
-  alt: `${SITE_ORIGIN}/src/assets/og-image.jpg`,
+  primary: `${SITE_ORIGIN}/og-image.jpg`,
+  alt: `${SITE_ORIGIN}/og-image.jpg`,
 };
 
 type SeoArgs = {
@@ -16,22 +16,30 @@ type SeoArgs = {
 };
 
 export function pageHead({ title, description, path, ogType = "website", image = ogImages.primary }: SeoArgs) {
+  const fullUrl = path.startsWith("http") ? path : `${SITE_ORIGIN}${path.startsWith("/") ? "" : "/"}${path}`;
+  const fullImageUrl = image.startsWith("http") ? image : `${SITE_ORIGIN}${image.startsWith("/") ? "" : "/"}${image}`;
+
   return {
     meta: [
       { title },
       { name: "description", content: description },
+      { property: "og:site_name", content: hostel.name },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: ogType },
-      { property: "og:url", content: path },
-      { property: "og:image", content: image },
-      { property: "og:image:alt", content: `${hostel.name} — boys PG and hostel in Dankaur, Greater Noida` },
+      { property: "og:url", content: fullUrl },
+      { property: "og:image", content: fullImageUrl },
+      { property: "og:image:secure_url", content: fullImageUrl },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: `${hostel.name} — Boys PG & Hostel in Dankaur` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
-      { name: "twitter:image", content: image },
+      { name: "twitter:image", content: fullImageUrl },
     ],
-    links: [{ rel: "canonical", href: path }],
+    links: [{ rel: "canonical", href: fullUrl }],
   };
 }
 

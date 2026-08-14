@@ -8,9 +8,9 @@ import { hostel, fullAddress, telHref, whatsappHref } from "@/data/hostel";
 import { pageHead, breadcrumbSchema } from "@/lib/seo";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
-const title = "Contact | Call or WhatsApp BABA PG & HOSTEL, Dankaur";
+const title = "Contact Us | BABA PG & HOSTEL Dankaur";
 const description =
-  "Contact BABA PG & HOSTEL in Jaat Colony, Dankaur, Greater Noida. Call 7037936443 or 9999645243, WhatsApp 9999645243, or send an enquiry online.";
+  "Contact BABA PG & HOSTEL in Dankaur. Call or WhatsApp 7037936443 / 9999645243 for room booking & inquiries.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

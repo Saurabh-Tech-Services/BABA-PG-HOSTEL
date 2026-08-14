@@ -4,9 +4,9 @@ import { Gallery } from "@/components/site/Gallery";
 import { FinalCta } from "@/components/site/Sections";
 import { pageHead, breadcrumbSchema } from "@/lib/seo";
 
-const title = "Gallery | Rooms, Mess & Common Areas — BABA PG & HOSTEL Dankaur";
+const title = "Photo Gallery | BABA PG & HOSTEL Dankaur";
 const description =
-  "Photo gallery of BABA PG & HOSTEL in Jaat Colony, Dankaur — rooms, dining, common areas and facilities of our boys PG in Greater Noida.";
+  "Explore photos of rooms, mess, common area, study zone & amenities at BABA PG & HOSTEL in Dankaur, Greater Noida.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({

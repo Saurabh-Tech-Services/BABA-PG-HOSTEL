@@ -7,9 +7,9 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/blog")({
   head: () =>
     pageHead({
-      title: "Guides | Student Accommodation in Dankaur — BABA PG & HOSTEL",
+      title: "Student Guides | BABA PG & HOSTEL Dankaur",
       description:
-        "Guides and updates from BABA PG & HOSTEL about student accommodation in Dankaur and Greater Noida.",
+        "Helpful guides and tips for students finding PG and hostel accommodation in Dankaur and Greater Noida.",
       path: "/blog",
     }),
   component: BlogPage,
