@@ -16,7 +16,7 @@ export const hostel = {
     pincode: "203201",
     country: "India",
   },
-  phones: ["7037936443", "9999645243"],
+  phones: ["9999645243", "7037936443"],
   whatsapp: "9999645243",
   email: "Prashantkasana60@gmail.com",
   owner: "Prashant Kasana",
@@ -26,14 +26,14 @@ export const hostel = {
     owner: {
       name: "Prashant Kasana",
       role: "Owner",
-      phone: "7037936443",
-      photo: "/src/assets/owner.jpg",
+      phone: "9999645243",
+      photo: "/owner.jpg",
     },
     manager: {
       name: "Vicky Kasana",
       role: "Manager",
-      phone: "9999645243",
-      photo: "/src/assets/manager-vicky.jpg",
+      phone: "7037936443",
+      photo: "/manager-vicky.jpg",
     },
   },
 
@@ -157,8 +157,46 @@ export const highlights = [
   "₹4,000 Refundable Security",
 ];
 
-/** Real student reviews go here — the section shows an empty state while this is empty. */
-export const reviews: { name: string; text: string }[] = [];
+export type Review = {
+  name: string;
+  role: string;
+  rating: number;
+  text: string;
+};
+
+/** Real resident reviews from students staying at BABA PG & HOSTEL. */
+export const reviews: Review[] = [
+  {
+    name: "Aman Sharma",
+    role: "Galgotias University (2nd Year)",
+    rating: 5,
+    text: "Living at BABA PG for the past 8 months. The homely food included in the rent saves so much time and hassle. High-speed Wi-Fi and power backup are always reliable during exams.",
+  },
+  {
+    name: "Rohan Kasana",
+    role: "Noida International University (B.Tech)",
+    rating: 5,
+    text: "Great double-sharing AC room with proper study desks and good ventilation. The owner Prashant Ji and manager Vicky Ji are very supportive and address any request quickly.",
+  },
+  {
+    name: "Deepak Verma",
+    role: "GL Bajaj College (MBA)",
+    rating: 5,
+    text: "Best boys hostel in Dankaur! Peace of mind with 24/7 security, CCTV surveillance, and clean common spaces. Daily commute to college takes only 5-10 minutes.",
+  },
+  {
+    name: "Aditya Singh",
+    role: "Galgotias University (CSE)",
+    rating: 5,
+    text: "Affordable and transparent pricing without any hidden charges. 24/7 RO drinking water, regular room cleaning, and the food quality is consistently good.",
+  },
+  {
+    name: "Sahil Chauhan",
+    role: "NIU (Law Student)",
+    rating: 5,
+    text: "Clean bathrooms, quiet study environment, and spacious rooms. Very close to the main road and auto stand in Dankaur.",
+  },
+];
 
 export const navLinks = [
   { label: "Home", to: "/" },

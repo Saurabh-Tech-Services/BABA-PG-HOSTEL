@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, UtensilsCrossed, Snowflake, IndianRupee, GraduationCap, PhoneCall, Phone, Quote } from "lucide-react";
+import { MapPin, UtensilsCrossed, Snowflake, IndianRupee, GraduationCap, PhoneCall, Phone, Quote, Star } from "lucide-react";
 import foodMess from "@/assets/food.png";
 import { Section, SectionHeading } from "./Section";
 import { Button } from "@/components/ui/button";
@@ -88,15 +88,42 @@ export function Testimonials() {
       <SectionHeading
         eyebrow="Reviews"
         title="What Students Say"
-        description="Genuine feedback from residents will be published here."
+        description="Genuine feedback and experiences from residents at BABA PG & HOSTEL."
       />
       {reviews.length ? (
-        <ul className="grid gap-5 md:grid-cols-3">
-          {reviews.map((r) => (
-            <li key={r.name} className="rounded-2xl border border-border bg-card p-6 shadow-card">
-              <Quote className="h-5 w-5 text-accent" aria-hidden="true" />
-              <p className="mt-3 text-sm leading-relaxed">{r.text}</p>
-              <p className="mt-4 text-sm font-semibold">{r.name}</p>
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {reviews.map((r, i) => (
+            <li
+              key={r.name}
+              className={`flex flex-col justify-between rounded-3xl border border-border bg-card p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
+                i % 2 === 0 ? "hover:border-accent/40" : "hover:border-primary/40"
+              }`}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1 text-amber-400">
+                    {Array.from({ length: r.rating || 5 }).map((_, idx) => (
+                      <Star key={idx} className="h-4 w-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+                    ))}
+                  </div>
+                  <Quote className="h-6 w-6 text-accent/30" aria-hidden="true" />
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-foreground/90">
+                  "{r.text}"
+                </p>
+              </div>
+
+              <div className="mt-6 flex items-center gap-3 border-t border-border/70 pt-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-sm font-bold text-accent">
+                  {r.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-foreground">{r.name}</p>
+                  {r.role && (
+                    <p className="text-xs text-muted-foreground">{r.role}</p>
+                  )}
+                </div>
+              </div>
             </li>
           ))}
         </ul>

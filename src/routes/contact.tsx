@@ -10,7 +10,7 @@ import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 const title = "Contact Us | BABA PG & HOSTEL Dankaur";
 const description =
-  "Contact BABA PG & HOSTEL in Dankaur. Call or WhatsApp 7037936443 / 9999645243 for room booking & inquiries.";
+  "Contact BABA PG & HOSTEL in Dankaur. Call or WhatsApp 9999645243 / 7037936443 for room booking & inquiries.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

@@ -42,7 +42,7 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with BABA PG & HOSTEL on WhatsApp"
-      className="fixed bottom-20 right-4 z-50 grid h-13 w-13 place-items-center rounded-full bg-whatsapp p-3.5 text-whatsapp-foreground shadow-float transition-transform hover:scale-105 md:bottom-6 md:right-6"
+      className="fixed bottom-20 right-4 z-50 grid h-13 w-13 place-items-center rounded-full bg-whatsapp p-3.5 text-whatsapp-foreground shadow-float transition-transform hover:scale-110 active:scale-95 animate-float animate-pulse-glow md:bottom-6 md:right-6"
     >
       <WhatsAppIcon className="h-6 w-6" aria-hidden="true" />
     </a>
