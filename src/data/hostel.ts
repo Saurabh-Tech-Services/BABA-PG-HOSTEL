@@ -38,10 +38,12 @@ export const hostel = {
   },
 
 
-  /** Add the real links here when available — sections stay hidden until then. */
-  googleMapsUrl: "",
-  googleMapsEmbedUrl: "",
-  googleBusinessProfileUrl: "",
+  /** Real Google Maps links */
+  googleMapsUrl: "https://maps.app.goo.gl/A6EXEkKn4o4pkCD27",
+  googleMapsEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.378350603797!2d77.54605617527804!3d28.34740877582169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc7e66de31989%3A0x3748b33d16c6881f!2sShivi%20pg!5e0!3m2!1sen!2sin!4v1786773067054!5m2!1sen!2sin",
+  googleBusinessProfileUrl: "https://maps.app.goo.gl/A6EXEkKn4o4pkCD27",
+  staticMapImage: "/Map.jpg",
 
   /** Only supplied links are rendered. */
   social: {

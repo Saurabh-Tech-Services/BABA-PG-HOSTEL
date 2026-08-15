@@ -28,13 +28,28 @@ export function EnquiryForm({ variant = "booking" }: Props) {
         await emailjs.send(
           SERVICE_ID,
           TEMPLATE_ID,
-          { ...data, to_email: hostel.email, form_type: variant },
+          {
+            from_name: data.full_name,
+            full_name: data.full_name,
+            phone: data.phone,
+            whatsapp: data.whatsapp || data.phone,
+            email: data.email,
+            form_type: isBooking ? "Room Booking Enquiry" : "General Contact Enquiry",
+            preferred_room: data.preferred_room || "N/A",
+            move_in_date: data.move_in_date || "Flexible / Not specified",
+            persons: data.persons || "1",
+            message: data.message || "No additional message provided.",
+            to_email: hostel.email,
+            site_name: hostel.name,
+            submitted_at: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+          },
           { publicKey: PUBLIC_KEY },
         );
         setStatus("sent");
         form.reset();
         return;
-      } catch {
+      } catch (err) {
+        console.error("EmailJS submission error:", err);
         setStatus("error");
         return;
       }

@@ -98,7 +98,7 @@ function ContactPage() {
 
       <Section tone="surface">
         <SectionHeading eyebrow="Find us" title="Location & Directions" />
-        <LocationMap />
+        <LocationMap variant="embed" />
       </Section>
     </>
   );
