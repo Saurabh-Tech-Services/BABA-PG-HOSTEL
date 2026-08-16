@@ -50,6 +50,7 @@ export const localBusinessSchema = {
   name: hostel.name,
   description:
     "Boys PG and hostel accommodation in Jaat Colony, Dankaur, Greater Noida with AC and non-AC double sharing rooms and food included.",
+  image: `${SITE_ORIGIN}/og-image.jpg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: `${hostel.address.street}, ${hostel.address.locality}`,
@@ -60,19 +61,34 @@ export const localBusinessSchema = {
   },
   telephone: hostel.phones.map((p) => `+91${p}`),
   email: hostel.email,
-  url: "/",
+  url: `${SITE_ORIGIN}/`,
   priceRange: `${formatPrice(Math.min(...roomPlans.map((r) => r.price)))} - ${formatPrice(Math.max(...roomPlans.map((r) => r.price)))} per month`,
   areaServed: ["Dankaur", "Greater Noida", "Gautam Buddha Nagar"],
 };
 
-export const breadcrumbSchema = (name: string, path: string) => ({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-    { "@type": "ListItem", position: 2, name, item: path },
-  ],
-});
+export const breadcrumbSchema = (name: string, path: string) => {
+  const homeUrl = `${SITE_ORIGIN}/`;
+  const itemUrl = path.startsWith("http") ? path : `${SITE_ORIGIN}${path.startsWith("/") ? "" : "/"}${path}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: homeUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name,
+        item: itemUrl,
+      },
+    ],
+  };
+};
 
 export const faqs = [
   {

@@ -37,6 +37,7 @@ export const Route = createFileRoute("/location/$slug")({
             "@type": "LodgingBusiness",
             name: `${hostel.name} — PG near ${l.name}`,
             description: l.intro,
+            image: "https://shivibabapg.com/og-image.jpg",
             address: {
               "@type": "PostalAddress",
               streetAddress: `${hostel.address.street}, ${hostel.address.locality}`,
@@ -48,7 +49,7 @@ export const Route = createFileRoute("/location/$slug")({
             telephone: hostel.phones.map((p) => `+91${p}`),
             email: hostel.email,
             areaServed: { "@type": "Place", name: l.name },
-            url: `/location/${l.slug}`,
+            url: `https://shivibabapg.com/location/${l.slug}`,
           }),
         },
         {
@@ -57,9 +58,9 @@ export const Route = createFileRoute("/location/$slug")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-              { "@type": "ListItem", position: 2, name: "Location", item: "/location" },
-              { "@type": "ListItem", position: 3, name: l.name, item: `/location/${l.slug}` },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://shivibabapg.com/" },
+              { "@type": "ListItem", position: 2, name: "Location", item: "https://shivibabapg.com/location" },
+              { "@type": "ListItem", position: 3, name: l.name, item: `https://shivibabapg.com/location/${l.slug}` },
             ],
           }),
         },
